@@ -1,0 +1,46 @@
+
+
+#python
+
+def commonElements (self,A, B, C, n1, n2, n3):
+        # your code here
+        k1=list(set(A))
+        k2=list(set(B))
+        k3=list(set(C))
+        l=[]
+        fg=[]
+        r=" "
+        for g in k3:
+            if((g in k2) and (g in k1)):
+                l.append(g)
+        l.sort()
+        for i in l:
+            fg.append(str(i))
+       
+        for j in fg:
+            r.join(j)
+        return r
+        
+        
+        
+        -------------------------------------------------------
+        
+        
+        
+        def IntersecOfSets(arr1, arr2, arr3):
+    # Converting the arrays into sets
+    s1 = set(arr1)
+    s2 = set(arr2)
+    s3 = set(arr3)
+      
+    # Calculates intersection of 
+    # sets on s1 and s2
+    set1 = s1.intersection(s2)         #[80, 20, 100]
+      
+    # Calculates intersection of sets
+    # on set1 and s3
+    result_set = set1.intersection(s3)
+      
+    # Converts resulting set to list
+    final_list = list(result_set)
+    print(final_list)
