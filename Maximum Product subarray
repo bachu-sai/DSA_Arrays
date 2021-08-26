@@ -1,0 +1,42 @@
+
+
+
+#python
+
+
+def maxProduct(self,arr, n):
+		# code here
+		maxPro=arr[0]
+		minPro=arr[0]
+		ans=arr[0]
+		for i in range(1,n):
+		    ch1=maxPro*arr[i]
+		    ch2=minPro*arr[i]
+		    maxPro=max(arr[i],max(ch1,ch2))
+		    minPro=min(arr[i],min(ch1,ch2))
+		    ans=max(maxPro,ans)
+		return ans
+    
+    
+    ---------------------------------------------------
+
+
+
+#Java
+
+long maxProduct(int[] arr, int n) {
+        // code here
+        long maxPro= arr[0];
+        long minPro= arr[0];
+        long ans=arr[0];
+        long ch1,ch2;
+        for(int i=1;i<n;i++)
+        {
+            ch1=maxPro*arr[i];
+            ch2=minPro*arr[i];
+            maxPro=Math.max(arr[i],Math.max(ch1,ch2));
+            minPro=Math.min(arr[i],Math.min(ch1,ch2));
+            ans=Math.max(ans,maxPro);
+        }
+        return ans;
+    }
