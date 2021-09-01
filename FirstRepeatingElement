@@ -1,0 +1,25 @@
+
+
+class Solution {
+    // Function to return the position of the first repeating element.
+    public static int firstRepeated(int[] arr, int n) {
+        // Your code here
+        HashSet<Integer> hs = new HashSet<Integer>();
+        int mini = -1;
+        for(int i=arr.length-1;i>=0;i--)
+        {
+            if(hs.contains(arr[i]))
+            {
+                mini=i;
+            }
+            else
+            {
+                hs.add(arr[i]);
+            }
+        }
+        if(mini!=-1)
+        return mini+1;
+        else
+        return -1;
+    }
+}
