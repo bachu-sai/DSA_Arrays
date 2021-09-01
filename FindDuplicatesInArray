@@ -1,0 +1,16 @@
+      d={}
+    	c=0
+    	l=[]
+    	for i in arr:
+    	    if(i not in d):
+    	        d[i]=1
+    	    else:
+    	        d[i]+=1
+    	
+    	for k in d.keys():
+    	    if(d[k]>1):
+    	        l.append(k)
+    	if(len(l)==0):
+    	    return -1
+    	else:
+    	    return l
